@@ -13,7 +13,7 @@ public class Listners implements ITestListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 
-		ITestListener.super.onTestSuccess(result);
+		ITestListener.super.onTestSuccess(result);//ok change
 		// System.out.println("Listners passed the test");
 	}
 
