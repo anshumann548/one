@@ -5,3 +5,5 @@ public class STRINGS {
 	static String NumCal = "http://venturepact657.outgrow.in/templates";
 	static String Content1 = "https://venturepact864.outgrow.co/build/";
 }
+
+//ok
