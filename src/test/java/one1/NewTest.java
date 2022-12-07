@@ -1,3 +1,4 @@
+
 package one1;
 
 import org.testng.annotations.Test;
@@ -28,8 +29,10 @@ public class NewTest extends STRINGS {
 	// , can't declare outside of the method
 	WebDriverWait wait;
 
+	Actions object = new Actions(driver);
+	
 	NewTest() {
-
+		System.out.println("constructor called!");
 		System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
 		driver = new ChromeDriver();
 
@@ -96,22 +99,31 @@ public class NewTest extends STRINGS {
 		driver.findElement(
 				By.xpath("//*[@id=\'main-div\']/app-root/og-builder/app-builder/section/header/div[4]/ul/li[3]/a"))
 				.click();
-		Thread.sleep(10000);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(5000);
+		
+		object.moveToElement((WebElement) By.xpath("//*[@id=\"landingBtn\"]/span")).perform();
+		
+		
+		
+		
+		
+		
+		
+	//	Robot robot = new Robot();
+		//robot.keyPress(KeyEvent.VK_TAB);
+		//robot.keyRelease(KeyEvent.VK_TAB);
+		//robot.keyPress(KeyEvent.VK_TAB);
+		//robot.keyRelease(KeyEvent.VK_TAB);
+		//robot.keyPress(KeyEvent.VK_TAB);
+		//robot.keyRelease(KeyEvent.VK_TAB);
+		//robot.keyPress(KeyEvent.VK_TAB);
+		//robot.keyRelease(KeyEvent.VK_TAB);
+		//robot.keyPress(KeyEvent.VK_TAB);
+		//robot.keyRelease(KeyEvent.VK_TAB);
+		//robot.keyPress(KeyEvent.VK_TAB);
+		//robot.keyRelease(KeyEvent.VK_TAB);
+		//robot.keyPress(KeyEvent.VK_ENTER);
+		//robot.keyRelease(KeyEvent.VK_ENTER);
 
 	}
 
