@@ -2,44 +2,44 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-07T18:13:00 IST" name="Default suite" finished-at="2022-12-07T18:13:55 IST" duration-ms="54501">
+  <suite started-at="2022-12-08T11:19:38 IST" name="Default suite" finished-at="2022-12-08T11:20:29 IST" duration-ms="51362">
     <groups>
     </groups>
-    <test started-at="2022-12-07T18:13:00 IST" name="Default test" finished-at="2022-12-07T18:13:55 IST" duration-ms="54501">
-      <class name="one1.NewTest">
-        <test-method is-config="true" signature="OpenBrowserPage()[pri:0, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:00 IST" name="OpenBrowserPage" finished-at="2022-12-07T18:13:04 IST" duration-ms="3708" status="PASS">
+    <test started-at="2022-12-08T11:19:38 IST" name="Default test" finished-at="2022-12-08T11:20:29 IST" duration-ms="51362">
+      <class name="one1.NewTest2">
+        <test-method is-config="true" signature="OpenBrowserPage()[pri:0, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:19:38 IST" name="OpenBrowserPage" finished-at="2022-12-08T11:19:40 IST" duration-ms="2484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowserPage -->
-        <test-method signature="Login()[pri:0, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:04 IST" name="Login" finished-at="2022-12-07T18:13:04 IST" duration-ms="222" status="PASS">
+        <test-method signature="Login()[pri:0, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:19:40 IST" name="Login" finished-at="2022-12-08T11:19:41 IST" duration-ms="224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Calciopen()[pri:1, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:04 IST" name="Calciopen" finished-at="2022-12-07T18:13:17 IST" duration-ms="12254" status="PASS">
+        <test-method signature="Calciopen()[pri:1, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:19:41 IST" name="Calciopen" finished-at="2022-12-08T11:19:52 IST" duration-ms="11762" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Calciopen -->
-        <test-method signature="oneColumn()[pri:2, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:17 IST" name="oneColumn" finished-at="2022-12-07T18:13:24 IST" duration-ms="7872" status="PASS">
+        <test-method signature="oneColumn()[pri:2, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:19:52 IST" name="oneColumn" finished-at="2022-12-08T11:20:00 IST" duration-ms="7690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oneColumn -->
-        <test-method signature="Formulabuild()[pri:3, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:24 IST" name="Formulabuild" finished-at="2022-12-07T18:13:34 IST" duration-ms="9585" status="PASS">
+        <test-method signature="Formulabuild()[pri:3, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:20:00 IST" name="Formulabuild" finished-at="2022-12-08T11:20:08 IST" duration-ms="8131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Formulabuild -->
-        <test-method signature="Formulacreate()[pri:4, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:34 IST" name="Formulacreate" finished-at="2022-12-07T18:13:40 IST" duration-ms="5711" status="PASS">
+        <test-method signature="Formulacreate()[pri:4, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:20:08 IST" name="Formulacreate" finished-at="2022-12-08T11:20:14 IST" duration-ms="5829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Formulacreate -->
-        <test-method signature="Previewopen()[pri:5, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:40 IST" name="Previewopen" finished-at="2022-12-07T18:13:55 IST" duration-ms="15122" status="PASS">
+        <test-method signature="Previewopen()[pri:6, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:20:14 IST" name="Previewopen" finished-at="2022-12-08T11:20:29 IST" duration-ms="15211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Previewopen -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:one1.NewTest@1698d7c0]" started-at="2022-12-07T18:13:55 IST" name="afterTest" finished-at="2022-12-07T18:13:55 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:one1.NewTest2@79ab34c1]" started-at="2022-12-08T11:20:29 IST" name="afterTest" finished-at="2022-12-08T11:20:29 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- one1.NewTest -->
+      </class> <!-- one1.NewTest2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

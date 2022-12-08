@@ -27,9 +27,9 @@ public class NewTest2 extends STRINGS {
 	// , can't declare outside of the method
 	WebDriverWait wait;
 
-NewTest2() {
+	NewTest2() {
 
-	System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
 		driver = new ChromeDriver();
 
 	}
@@ -88,21 +88,20 @@ NewTest2() {
 
 	}
 
-	//@Test(priority = 5)
-	//public void Builderconfig() throws InterruptedException {
-		//driver.findElement(By.xpath("//*[@id=\'Build\']/aside/div[1]/ul[1]/li[1]/a/i")).click();		
-			
-	
-	//}
+	// @Test(priority = 5)
+	// public void Builderconfig() throws InterruptedException {
+	// driver.findElement(By.xpath("//*[@id=\'Build\']/aside/div[1]/ul[1]/li[1]/a/i")).click();
 
-@Test(priority = 6)
-public void Previewopen() throws InterruptedException, AWTException {
+	// }
+
+	@Test(priority = 6)
+	public void Previewopen() throws InterruptedException, AWTException {
 
 		Thread.sleep(5000);
 		driver.findElement(
-			By.xpath("//*[@id=\'main-div\']/app-root/og-builder/app-builder/section/header/div[4]/ul/li[3]/a"))
+				By.xpath("//*[@id=\'main-div\']/app-root/og-builder/app-builder/section/header/div[4]/ul/li[3]/a"))
 				.click();
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_TAB);
 		robot.keyRelease(KeyEvent.VK_TAB);
@@ -113,25 +112,19 @@ public void Previewopen() throws InterruptedException, AWTException {
 		robot.keyPress(KeyEvent.VK_TAB);
 		robot.keyRelease(KeyEvent.VK_TAB);
 		robot.keyPress(KeyEvent.VK_TAB);
-	    robot.keyRelease(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
 		robot.keyPress(KeyEvent.VK_TAB);
 		robot.keyRelease(KeyEvent.VK_TAB);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
-
+		
+		Thread.sleep(5000);
 	}
 
-	//@Test(priority = 7)
-	//public void Solvecalci() throws InterruptedException, AWTException {
-		//Thread.sleep(5000);
-
-		//Robot robot = new Robot();
-		//robot.keyPress(KeyEvent.VK_ENTER);
-		//robot.keyRelease(KeyEvent.VK_ENTER);
-		//Thread.sleep(5000);
-		//robot.keyPress(KeyEvent.VK_ENTER);
-		//robot.keyRelease(KeyEvent.VK_ENTER);
-	//}
+	@Test(priority = 7)
+	public void previewsolve() throws InterruptedException, AWTException {
+		driver.findElement(By.xpath("//*[@id=\'63917b15902057456d02f81f\']/span")).click();
+	}
 
 	@BeforeTest
 	public void OpenBrowserPage() {
