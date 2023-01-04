@@ -8,13 +8,17 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 //Class initialization
 
 public class NewTest2 extends STRINGS {
@@ -94,36 +98,31 @@ public class NewTest2 extends STRINGS {
 
 	// }
 
-	@Test(priority = 6)
-	public void Previewopen() throws InterruptedException, AWTException {
+	 @Test(priority = 6)
+	 public void LiveCalciopen() throws InterruptedException, AWTException {
 
-		Thread.sleep(5000);
-		driver.findElement(
-				By.xpath("//*[@id=\'main-div\']/app-root/og-builder/app-builder/section/header/div[4]/ul/li[3]/a"))
-				.click();
-		Thread.sleep(5000);
-		Robot robot = new Robot();
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_TAB);
-		robot.keyRelease(KeyEvent.VK_TAB);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		Thread.sleep(5000);
-	}
+	 Thread.sleep(5000);
+	 driver.findElement(
+	 By.xpath("//*[@id=\'main-div\']/app-root/og-builder/app-builder/section/header/div[4]/ul/li[4]/div/a"))
+	 .click();
+	 driver.findElement(By.xpath("//*[@id=\'live-btn\']")).click();
+	 
+	 Thread.sleep(3000);
+	String element = "https://venturepact864.outgrow.us/venturepact864-595";
+	driver.navigate().to(element);
+	 Thread.sleep(2000);
+ driver.findElement(By.xpath("//*[@id=\'landingBtn\']")).click();
+
+	 }
 
 	@Test(priority = 7)
-	public void previewsolve() throws InterruptedException, AWTException {
-		driver.findElement(By.xpath("//*[@id=\'63917b15902057456d02f81f\']/span")).click();
+
+public void solve() throws InterruptedException, AWTException {
+		Thread.sleep(2000);
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_ENTER);
+		 robot.keyRelease(KeyEvent.VK_ENTER);
+driver.findElement(By.partialLinkText("/html/body/app-root/temp/master_layout/div[2]/questionnaire/section/div[3]/form/column-one/div/section/div/div/div/div[2]/control/radio-button/div/div/div[1]/label/div/div")).click();
 	}
 
 	@BeforeTest
