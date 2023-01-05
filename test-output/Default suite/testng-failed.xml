@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="one1.NewTest">
+      <class name="one1.preprodin">
         <methods>
+          <include name="Searchfont"/>
           <include name="OpenBrowserPage"/>
-          <include name="afterTest"/>
-          <include name="Formulacreate"/>
-          <include name="Previewopen"/>
           <include name="Formulabuild"/>
-          <include name="Calciopen"/>
+          <include name="Formulacreate"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- one1.NewTest -->
+      </class> <!-- one1.preprodin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

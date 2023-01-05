@@ -6,12 +6,17 @@ import org.testng.annotations.BeforeTest;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -51,8 +56,14 @@ public class preprodin extends STRINGS {
 		driver.findElement(By.xpath("//*[@id='btnLoginSubmit']")).click();
 
 		Assert.assertEquals("http://venturepact657.outgrow.in/dashboard", logcheck);
-
+		 File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		 
+	        try {
+	            FileUtils.copyFile(screenshot, new File("/home/anshumann/Desktop//homePageScreenshot.png"));
+	        } catch (IOException e) {
+	            System.out.println(e.getMessage());
 	}
+	        }
 
 	@Test(priority = 1)
 	public void Calciopen() {
@@ -120,17 +131,16 @@ public class preprodin extends STRINGS {
 
 	@Test(priority = 7)
 	public void Searchfont() throws InterruptedException {
-	List<WebElement> list =driver.findElements(By.xpath("//*[@id=\'display_setting_display_tab\']/div[4]/div[2]/div[1]/div[2]/app-global-fonts/div/input"));	
-	for(int i = 0; i<=list.size()-1; i++)
-	{
-        if(list.get(i).getText().contains("Zilla"))
-        {
-            list.get(i).click();
-            break ;
-	}	
-	
-	}
-	
+		List<WebElement> list = driver.findElements(By.xpath(
+				"//*[@id=\'display_setting_display_tab\']/div[4]/div[2]/div[1]/div[2]/app-global-fonts/div/input"));
+
+		for (WebElement element : list) {
+			String vv = element.getText();
+			System.out.println(vv);
+			if (element.getText().contains("Aeonik"))
+				;
+			element.click();
+		}
 	}
 
 //	@Test(priority = 6)
