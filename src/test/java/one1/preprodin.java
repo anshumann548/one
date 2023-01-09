@@ -56,14 +56,14 @@ public class preprodin extends STRINGS {
 		driver.findElement(By.xpath("//*[@id='btnLoginSubmit']")).click();
 
 		Assert.assertEquals("http://venturepact657.outgrow.in/dashboard", logcheck);
-		 File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		 
-	        try {
-	            FileUtils.copyFile(screenshot, new File("/home/anshumann/Desktop//homePageScreenshot.png"));
-	        } catch (IOException e) {
-	            System.out.println(e.getMessage());
+		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		try {
+			FileUtils.copyFile(screenshot, new File("/home/anshumann/Desktop//homePageScreenshot.png"));
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
 	}
-	        }
 
 	@Test(priority = 1)
 	public void Calciopen() {
@@ -143,7 +143,23 @@ public class preprodin extends STRINGS {
 		}
 	}
 
-//	@Test(priority = 6)
+	@Test(priority = 8)
+	public void Layoutchanger() throws InterruptedException {
+		driver.findElement(By.xpath("//*[@id=\'display_setting\']/div[1]/ul/li[2]")).click();
+		WebElement ele = driver.findElement(By.xpath("//*[@id=\'Build\']/main/div[2]"));
+		WebElement ele1 = driver.findElement(By.xpath("//*[@id=\'display_setting\']/div[2]"));
+		Thread.sleep(3000);
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("arguments[0].scrollTo(0, 900)", ele1);
+		driver.findElement(By.xpath("//*[@id=\'real_time_2\']")).click();	
+		Thread.sleep(3000);
+	jse.executeScript("arguments[0].scrollTo(0, 2000)", ele);
+		
+		
+
+	}
+
+	// @Test(priority = 6)
 //	public void LiveCalciopen() throws InterruptedException, AWTException {
 //		Actions act = new Actions(driver);
 //		Thread.sleep(5000);
